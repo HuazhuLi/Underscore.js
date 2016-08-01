@@ -1,0 +1,110 @@
+//each
+  _.each = function(obj, iteratee, [context]) {
+    iteratee = optimizeCb(iteratee, context);
+    var i, length;
+    if (isArrayLike(obj)) {
+      for (i = 0, length = obj.length; i < length; i++) {
+        iteratee(obj[i], i, obj);
+      }
+    } else {
+      var keys = _.keys(obj);
+      for (i = 0, length = keys.length; i < length; i++) {
+        iteratee(obj[keys[i]], keys[i], obj);
+      }
+    }
+    return obj;
+  };
+
+//map
+	_.map = function(obj, iteratee, [context]) {
+		iteratee = optimizeCb(iteratee,context);
+		var i, length;
+		var result = [], instantArray = [];
+		if (isArrayLike(obj)) {
+			for (i = 0, length = obj.length; i < length; i++) {
+        		instantArray[i] = obj[i];
+			}
+		} else {
+			var keys = ._keys(obj);
+			for (i = 0, length = keys.length; i < length; i++) {
+        		instantArray[i] = obj[keys[i]];
+		}
+		result[i] = iteratee(instantArray[i], i, instantArray)
+		}
+		return result;
+	};
+
+//reduce
+	_.reduce = function (obj,iteratee,[memo],[context]){
+		iteratee = optimizeCb(iteratee,context);
+		var i, length, result;
+		var instantArray = [];
+		if (isArrayLike(obj)) {
+			for (i = 0, length = obj.length; i < length; i++) {
+        		instantArray[i] = obj[i];
+			}
+		} else {
+			var keys = ._keys(obj);
+			for (i = 0, length = keys.length; i < length; i++) {
+        		instantArray[i] = obj[keys[i]];
+		}
+		result = memo;
+		for (var i = 0; i < instantArray.length; i++) {
+		 result = result + instantArray[i];
+		}
+	};
+
+
+//reduceRight
+	_.reduceRight = function(obj,iteratee,memo,context)//why the memo lose[]?
+		iteratee = optimizeCb(iteratee,context);
+		var i, length, result;
+		var instantArray = [];
+		if (isArrayLike(obj)) {
+			for ( i = obj.length - 1; i >= 0; i--) {
+				instantArray[length - i + 1] = obj[i];
+			}
+		} else {
+			var keys = ._keys(obj);
+			for ( i = keys.length - 1; i >= 0; i--) {
+				instantArray[length - i + 1] = obj[keys[i]];
+		}
+		result = memo;
+		for (var i = 0; i < instantArray.length; i++) {
+		 result = result + instantArray[i];
+		}
+
+	};
+
+
+//find
+	_.find = function(list, predicate, [context])
+		var i, length;
+		var instantArray = [];
+		if (isArrayLike(obj)) {
+			for (i = 0, length = obj.length; i < length; i++) {
+        		instantArray[i] = obj[i];
+			}
+		} else {
+			var keys = ._keys(obj);
+			for (i = 0, length = keys.length; i < length; i++) {
+        		instantArray[i] = obj[keys[i]];
+		}
+		do {
+			i = 0;
+			i++;
+			predicate(instantArray[i]);
+		} while (return undefined);
+
+
+
+//first
+	_.first = function(array, [n]){
+		var instantArray = [];
+		if (argument.length == 1) {
+			instantArray = array[1];
+		} else {
+			instantArray = array.slice(0, n-1);
+		}
+		return instantArray.toString;
+	}
