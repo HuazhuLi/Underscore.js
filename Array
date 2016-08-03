@@ -1,0 +1,53 @@
+//first
+	_.first = function(array, [n]){
+		var instantArray = [];
+		if (argument.length == 1) {
+			instantArray = array[1];
+		} else {
+			instantArray = array.slice(0, n-1);
+		}
+		return instantArray.toString;
+	}
+
+
+//last
+	_.last = function(array. [n]){
+		var instantArray = [];
+		var m = array.length;
+		if (argument.length == 1) {
+			instantArray = array[n-1];
+		} else {
+			instantArray = array.slice(m-n+1, m-1);
+		}
+		return instantArray.toString;
+	}
+
+
+//initial
+	_.initial = function(array,[n]){
+		var instantArray = [];
+		var m = array.length;
+		if (argument.length == 1) {
+			instantArray = array.slice(0, m-2);
+		} else {
+			instantArray = array.slice(0, m-1-n);
+		}
+		return instantArray;
+	}
+
+//rest
+	_.rest = function(array, [n]){
+		var instantArray = [];
+		var m = array.length;
+		if (argument.length == 1) {
+			instantArray = array.slice(1, m-1);
+		} else {
+			instantArray = array.slice(n-1, m-1);
+		}
+		return instantArray;
+	}
+
+//compact
+	_.compact = function(array){
+
+	}
