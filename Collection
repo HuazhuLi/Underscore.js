@@ -127,4 +127,23 @@
 	}
 
 
+//sample
+	_.sample = function(list,[n]){
+		if (list = null) {
+			return [];
+		} else {
+			if (_.size(list) == 1) {
+				return list[0];
+			} else {
+				for (var i = 0; i < Things.length; i++) {
+					Things[i]
+				}
+				var i = _.size(list) - 1;
+				var p = _.sample(0, i);
+				return list[p];
 
+			}
+		
+		}
+
+	}
