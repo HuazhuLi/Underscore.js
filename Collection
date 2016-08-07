@@ -108,3 +108,23 @@
 		}
 		return instantArray.toString;
 	}
+
+
+//size
+	_.size = function(list){
+		var keys = _.keys(list);
+		var size = keys.length;
+		return size;
+	}
+
+//toArray
+	_.toArray = function(list){
+		var instantArray = [];
+		for (p of list) {
+			instantArray.push(p);
+		}
+		return instantArray;
+	}
+
+
+
