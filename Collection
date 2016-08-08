@@ -145,5 +145,26 @@
 			}
 		
 		}
+		
+		
+//filter
+	_.filter = function(list, predicate, [context]){
+		var values = _.value(list);
+		var length = values.length;
+		var instantArray = [];
+		for (var i = 0; i < values.length - 1; i++) {
+			predicate(values[i]) {
+				instantArray.push(values[i]);
+		}
+	}
+
+//where
+	_.where = function(list, properties){
+		var keys = _.keys(list);
+		var length = keys.length - 1;
+		for (var i = 0; i < length; i++) {
+			obj[keys[i]]
+		}
+	}
 
 	}
