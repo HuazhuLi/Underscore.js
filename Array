@@ -51,3 +51,16 @@
 	_.compact = function(array){
 
 	}
+
+
+//without
+	_.without = function(array, *values){
+		var length = argument.length;
+		for (var i = 0; i < argument.length; i++) {
+			values[i] = argument[i];
+		}
+		var newValue = values.slice(1, length-1);
+		for (var i = 0; i < newValue.length; i++) {
+			_.find(array, function(obj){ return obj == newValue[i]; })
+		}
+	}
