@@ -64,3 +64,39 @@
 			_.find(array, function(obj){ return obj == newValue[i]; })
 		}
 	}
+//partition
+	_.partition = function(array, predicate) {
+		
+	}
+
+
+
+//flatten //to do
+	_.flatten = function(array, [shallow]) {
+		var length = array,length;
+		for (var i = 0; i < array.length; i++) {
+			if(_.isArray(array[i]) = true && argument.length !== 1) {
+				_.flatten(array[i]);
+			} else {
+				if (_.isArray(array[i])) {
+
+				} else {
+					;
+				}
+			}
+
+		}
+			}
+	}
+//union
+	_.union = function(*arrays) {
+		var extendArray = {};
+
+		for (var i = 0; i < Things.length; i++) {
+			Things[i]
+		}
+
+
+
+		return extendArray;
+	}
